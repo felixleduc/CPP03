@@ -6,20 +6,20 @@
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 20:52:00 by fleduc            #+#    #+#             */
-/*   Updated: 2022/11/23 15:24:14 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/11/23 15:39:05 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap( void ) : _Name( "Default" ), _HitPoints( 100 ),
-_EnergyPoints( 50 ), _AttackDamage( 20 ) {
+_EnergyPoints( 100 ), _AttackDamage( 30 ) {
     std::cout << "ClapTrap " << this->_Name << " spawned" << std::endl;
     return ;
 }
 
 ClapTrap::ClapTrap( const std::string name ) : _Name( name ), _HitPoints( 100 ),
-_EnergyPoints( 50 ), _AttackDamage( 20 ) {
+_EnergyPoints( 100 ), _AttackDamage( 30 ) {
     std::cout << "ClapTrap " << this->_Name << " spawned" << std::endl;
     return ;
 }

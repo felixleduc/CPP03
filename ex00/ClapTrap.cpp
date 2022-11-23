@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fleduc <fleduc@student.42quebec.com>       +#+  +:+       +#+        */
+/*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 20:52:00 by fleduc            #+#    #+#             */
-/*   Updated: 2022/11/21 21:31:59 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/11/23 15:23:05 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,10 @@ void    ClapTrap::attack( const std::string& target ) {
             << " points of damage!" << std::endl;
         this->_EnergyPoints -= 1;
     }
+    if ( this->_HitPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " is dead :(" << std::endl;
+    else if ( this->_EnergyPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " has no energy left :(" << std::endl;
     return ;
 }
 
@@ -58,6 +62,10 @@ void    ClapTrap::takeDamage( unsigned int amount ) {
             << amount << " points of damage!" << std::endl;
         this->_HitPoints -= amount;
     }
+    if ( this->_HitPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " is dead :(" << std::endl;
+    else if ( this->_EnergyPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " has no energy left :(" << std::endl;
     return ;
 }
 
@@ -68,6 +76,10 @@ void    ClapTrap::beRepaired( unsigned int amount ) {
         this->_HitPoints += amount;
         this->_EnergyPoints -= 1;
     }
+    if ( this->_HitPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " is dead :(" << std::endl;
+    else if ( this->_EnergyPoints <= 0 )
+        std::cout << "ClapTrap " << this->_Name << " has no energy left :(" << std::endl;
     return ;
 }
 

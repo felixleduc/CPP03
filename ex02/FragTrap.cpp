@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 21:03:06 by fleduc            #+#    #+#             */
-/*   Updated: 2022/11/23 15:28:24 by fleduc           ###   ########.fr       */
+/*   Created: 2022/11/23 15:32:01 by fleduc            #+#    #+#             */
+/*   Updated: 2022/11/23 16:03:45 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap( void ) : ClapTrap( 100, 50, 20, "Default" ) {
+FragTrap::FragTrap( void ) : ClapTrap( 100, 100, 30, "Default" ) {
     std::cout << "ScavTrap " << this->_Name <<  " spawned" << std::endl; 
 }
 
-ScavTrap::ScavTrap( const std::string name ) : ClapTrap( 100, 50, 20, name ) {
+FragTrap::FragTrap( const std::string name ) : ClapTrap( 100, 100, 30, name ) {
     std::cout << "ScavTrap " << this->_Name <<  " spawned" << std::endl; 
 }
 
-ScavTrap::ScavTrap( const ScavTrap& cp ) {
+FragTrap::FragTrap( const FragTrap& cp ) {
     *this = cp;
 }
 
-ScavTrap::~ScavTrap() {
-    std::cout << "ScavTrap " << this->_Name << " disappeared" << std::endl;
+FragTrap::~FragTrap() {
+    std::cout << "FragTrap " << this->_Name << " disappeared" << std::endl;
 }
 
-ScavTrap&   ScavTrap::operator=( const ScavTrap& rhs ) {
+FragTrap&   FragTrap::operator=( const FragTrap& rhs ) {
     this->_Name = rhs._Name;
     this->_HitPoints = rhs._HitPoints;
     this->_EnergyPoints = rhs._EnergyPoints;
@@ -36,6 +36,6 @@ ScavTrap&   ScavTrap::operator=( const ScavTrap& rhs ) {
     return ( *this );
 }
 
-void    ScavTrap::guardGate( void ) {
-    std::cout << "ScavTrap " << this->_Name << " has entered Gate keeper mode" << std::endl;
+void    FragTrap::highFivesGuys( void ) {
+    std::cout << "ScavTrap " << this->_Name << " is asking for a high five!" << std::endl;
 }
