@@ -6,11 +6,14 @@
 /*   By: fleduc <fleduc@student.42quebec.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 20:52:02 by fleduc            #+#    #+#             */
-/*   Updated: 2022/11/22 21:35:31 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/11/24 14:13:01 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+
+# include <iostream>
 
 class ClapTrap {
   protected:
@@ -30,6 +33,6 @@ class ClapTrap {
     void    attack( const std::string& target );
     void    takeDamage( unsigned int amount );
     void    beRepaired( unsigned int amount );
-    void    setAttackDamage( unsigned int amount );
-    void    stats( void ) const;
 };
+
+#endif

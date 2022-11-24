@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fleduc <fleduc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fleduc <fleduc@student.42quebec.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 21:03:09 by fleduc            #+#    #+#             */
-/*   Updated: 2022/11/23 15:26:35 by fleduc           ###   ########.fr       */
+/*   Updated: 2022/11/24 14:14:13 by fleduc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ScavTrap : public ClapTrap {
 
     ScavTrap&   operator=( const ScavTrap& rhs );
 
+    void  attack( const std::string& target );
     void  guardGate( void );
 };
 
